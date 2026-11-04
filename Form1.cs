@@ -16,16 +16,6 @@ namespace plane.homework12
         {
            
         }
-        
-        SoundPlayer soundEnis = new SoundPlayer(@"C:\Users\USER\Downloads\enis.wav");
-        SoundPlayer soundTurbulans = new SoundPlayer(@"C:\Users\USER\Downloads\turbulans.wav");
-        SoundPlayer soundKemerler = new SoundPlayer(@"C:\Users\USER\Downloads\kemerler.wav");
-        SoundPlayer soundTesekkurler = new SoundPlayer(@"C:\Users\USER\Downloads\tesekkurler.wav");
-        SoundPlayer soundBeep = new SoundPlayer(@"C:\Users\USER\Downloads\beep.wav");
-
-        SoundPlayer soundGas = new SoundPlayer(@"C:\Users\USER\Downloads\tikla.wav");
-        SoundPlayer soundBreak = new SoundPlayer(@"C:\Users\USER\Downloads\tikla.wav");
-        SoundPlayer soundOnOff = new SoundPlayer(@"C:\Users\USER\Downloads\tikla.wav");
 
         bool Gas = false;
         bool Rev = false;
@@ -34,30 +24,37 @@ namespace plane.homework12
 
         private void button1_Click(object sender, EventArgs e)
         {
-            soundEnis.Play();
+            SoundPlayer player = new SoundPlayer("C:\Users\USER\Downloads\enis.wav");
+            player.Play();
         }
-
 
         private void button2_Click(object sender, EventArgs e)
         {
-            soundTurbulans.Play();
+            SoundPlayer player = new SoundPlayer("C:\Users\USER\Downloads\turbulans.wav");
+            player.Play();
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            soundKemerler.Play();
+            SoundPlayer player = new SoundPlayer("C:\Users\USER\Downloads\kemerler.wavv");
+            player.Play();
         }
+
         private void button4_Click(object sender, EventArgs e)
         {
-            soundTesekkurler.Play();
+            SoundPlayer player = new SoundPlayer("C:\Users\USER\Downloads\tesekkurler.wav");
+            player.Play();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            soundBeep.Play();
+            SoundPlayer player = new SoundPlayer("C:\Users\USER\Downloads\beep.wav");
+            player.Play();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            SoundPlayer soundGas = new SoundPlayer(@"C:\Users\USER\Downloads\tikla.wav");
             soundGas.Play();
             if (isEngineOn)
             {
@@ -65,11 +62,13 @@ namespace plane.homework12
                 Rev = false;
                 timer1.Start();
                 timer2.Stop();
+        
             }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            SoundPlayer soundBreak = new SoundPlayer(@"C:\Users\USER\Downloads\tikla.wav");
             soundBreak.Play();
             if (isEngineOn)
             {
@@ -77,12 +76,15 @@ namespace plane.homework12
                 Gas = false;
                 timer2.Start();
                 timer1.Stop();
+
+   
             }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             soundOnOff.Play();
+            SoundPlayer soundOnOff = new SoundPlayer(@"C:\Users\USER\Downloads\tikla.wav");
             if (isEngineOn == false)
             {
                 isEngineOn = true;
